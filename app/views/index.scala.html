@@ -1,8 +1,59 @@
+@main {
 
-@(message: String)
+    <div class="row">
+    </div>
 
-@main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+
+    <div class="row-fluid">
+
+        <div class="small-12 medium-6 large-3 columns centered">
+            <i class="fa fa-trophy fa-4x centered"></i>
+
+            <h3>Quality collision repair</h3>
+            <p>All of our mechanics are ASE certified and receive the most up-to-date training and diagnostic equipment for your vehicle.</p>
+            <p>We guarantee our work with a one year or 12,000- mile warranty.</p>
+            <p>We will provide references – a list of customers who can vouch for our work.</p>
+
+        </div>
+
+        <div class="small-12 medium-6 large-3 columns centered">
+            <i class="fa fa-map-marker fa-4x"></i>
+
+            <h3>Locally owned</h3>
+            <p>When you choose Columbia Auto Body, you support your local community. Dar and Brian have been running Columbia Auto Body for over 25 years, and employ over a dozen Columbia mechanics.</p>
+            <p><a href="@routes.Application.ourTeam()">Click here</a> to read about our team.</p>
+            <br>
+            <br>
+            <br>
+
+        </div>
+        <div class="small-12 medium-6 large-3 columns centered">
+            <i class="fa fa-dollar fa-4x"></i>
+            <h3>We work with all insurance companies</h3>
+            <p>We work with all insurance companies and repair all types of damage. We hope you will consider us when it comes to your vehicle repair needs. Our auto body shop offers nothing less than quality at competitive prices with guaranteed service.</p>
+            <p>Geico, Progressive, Ameriprise.</p>
+        </div>
+
+        <div class="small-12 medium-6 large-3 columns centered">
+            <i class="fa fa-clock-o fa-4x"></i>
+            <h3>Timely repairs</h3>
+            <p>You live a busy life. As a Columbia Auto Body customer, you'll receive a complimentary shuttle service or ride to work within 10 miles. We will keep you informed throughout the day.</p>
+        </div>
+        <hr>
+    </div>
+
 
 }
+
+<style>
+.centered {
+text-align: center;
+color: darkgreen;
+}
+
+p {
+text-align: left;
+}
+
+</style>

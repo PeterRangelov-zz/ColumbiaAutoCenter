@@ -1,0 +1,28 @@
+@import views.html.partials.header;
+
+@header()
+<div class="row"></div>
+
+    <div class="sticky">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="/">Home</a></h1>
+                </li>
+                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <li class="toggle-topbar menu-icon"><a href="@routes.Application.index()"><span>Menu</span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+                    <!-- Left Nav Section -->
+                <ul class="left">
+                    <li><a href="@routes.Application.services()">Services</a></li>
+                    <li><a href="@routes.Application.ourTeam()">Our team</a></li>
+                    <li><a href="@routes.Application.aboutUs()">About</a></li>
+                    <li><a href="@routes.Application.contactUs()">Contact us</a></li>
+                    <li><a href="@routes.Application.partsForSale()">Parts for sale</a></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+    <br>
