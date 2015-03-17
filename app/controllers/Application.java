@@ -12,7 +12,7 @@ public class Application extends Controller {
     }
 
     public static Result ourTeam() {
-        return TODO;
+        return ok(team.render());
     }
 
     public static Result aboutUs() {
