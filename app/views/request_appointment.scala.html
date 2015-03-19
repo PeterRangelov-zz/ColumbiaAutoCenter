@@ -1,0 +1,182 @@
+@(myForm: Form[forms.AppointmentRequest])
+
+@import forms.AppointmentRequest
+
+@main {
+
+
+
+    <script src="@routes.Assets.at("/javascripts/populateForm.js")"></script>
+    <script src="@routes.Assets.at("/javascripts/formance.min.js")"></script>
+    <div class="row">
+    </div>
+
+
+
+    <form action="@routes.Application.submitAppointmentRequest()" method="post" data-abide>
+
+
+
+        <div class="row">
+            <h2 class="centered">Request an Appointment</h2>
+
+            <fieldset>
+                <legend class="legend">Contact Information</legend>
+
+                <div class="row">
+                    <div class="medium-5 large-4 columns">
+                        <label>First name <small>required</small>
+                            <input type="text" name="firstName" id="firstName" placeholder="First name" required/>
+                        </label>
+                        <small class="error">Name is required.</small>
+                    </div>
+                    <div class="medium-5 large-4 columns">
+                        <label>Last name
+                            <input type="text" name="lastName" id="lastName" placeholder="Last name"/>
+                        </label>
+                    </div>
+                    <div class="medium-2 large-4 columns">
+                    </div>
+                </div>
+
+                <div class="row"></div>
+
+                <div class="row">
+                    <div class="medium-5 large-4 columns">
+                        <label>Phone <small>required</small>
+                            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="(555) 555-5555" required/>
+                            <small class="error">Phone number is required.</small>
+                        </label>
+                    </div>
+                    <div class="medium-5 large-4 columns">
+                        <label>Email <small>required</small>
+                            <input type="text" name="emailAddress" id="emailAddress" placeholder="xxxx@@xxxx.xxx" required pattern="email"/>
+                        </label>
+                        <small class="error">Valid email is required.</small>
+                    </div>
+                    <div class="medium-2 large-4 columns">
+                    </div>
+
+
+                </div>
+
+            </fieldset>
+
+
+
+            <fieldset>
+                <legend class="legend">Appointment Details</legend>
+
+                <div class="row">
+                    <div class="small-12 medium-4 columns">
+                        <label>Date & time (first choice) <small>required</small>
+                            <div class="small-6 medium-12 columns">
+                                <input type="text" name="date1" id="date1" placeholder="Date - first choice" required/>
+                            </div>
+                            <div class="small-6 medium-12 columns">
+                                <input type="text" name="time1" id="time1" placeholder="Time - first choice" required/>
+                            </div>
+                        </label>
+                        <small class="error">Date & time selection is required.</small>
+                    </div>
+                    <div class="small-12 medium-4 columns">
+                        <label>Date & time (second choice) <small>required</small>
+                            <div class="small-6 medium-12 columns">
+                                <input type="text" name="date2" id="date2" placeholder="Date - second choice" required/>
+                            </div>
+                            <div class="small-6 medium-12 columns">
+                                <input type="text" name="time2" id="time2" placeholder="Time - second choice" required/>
+                            </div>
+                        </label>
+                        <small class="error">Date & time selection is required.</small>
+
+                    </div>
+                    <div class="small-12 medium-4 columns">
+                        <label>Date & time (third choice)
+                            <div class="small-6 medium-12 columns">
+                                <input type="text" name="date3" id="date3" placeholder="Date - third choice" />
+                            </div>
+                            <div class="small-6 medium-12 columns">
+                                <input type="text" name="time3" id="time3" placeholder="Time - third choice" />
+                            </div>
+
+
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="small-12 medium-5 columns">
+                        <label>Vehicle Year, Make, and Model <small>required</small>
+                            <input type="text" name="vehicle" id="vehicle" placeholder="ex: 2009 Toyota Corolla" required/>
+                        </label>
+                        <small class="error">Please enter your vehicle year, make, and model.</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 medium-5 columns">
+                        <label>I'm making an appointment for <small>required</small>
+                            <select name="appointmentReason" id="appointmentReason" required>
+                                <option disabled="">-- Select service --</option>
+                                <option value="Brake Inspection">Brake Inspection</option>
+                                <option value="Car Not Starting">Car Not Starting</option>
+                                <option value="Check Engine Light On">Check Engine Light On</option>
+                                <option value="Courtesy Inspection/Trip Inspection">Courtesy Inspection/Trip Inspection</option>
+                                <option value="Engine Oil &amp; Filter Service">Engine Oil &amp; Filter Service</option>
+                                <option value="Factory Recommended Maintenance">Factory Recommended Maintenance</option>
+                                <option value="Returning for Recommended Work">Returning for Recommended Work</option>
+                                <option value="State Inspection">State Inspection</option>
+                                <option value="Wheel Alignment Check">Wheel Alignment Check</option>
+                                <option value="Tire Replacement">Tire Replacement</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
+                        <small class="error">Selection is required.</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns">
+                        <label>Comments <small>required</small>
+                            <textarea placeholder="Limit to 250 characters" name="comments" id="comments" required maxlength="250"></textarea>
+                        </label>
+                        <small class="error">Please enter some remarks to help us assist you.</small>
+                    </div>
+                </div>
+
+
+
+            </fieldset>
+
+
+
+            <div class="small-12 columns">
+                <button type="submit">Submit</button>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </form>
+
+    <br><br><br><br>
+}
+
+    <style>
+        .centered {
+            text-align: center;
+            color: darkgreen;
+        }
+
+        .legend {
+            background-color: transparent;
+        }
+
+
+    </style>
