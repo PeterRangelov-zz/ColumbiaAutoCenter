@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     console.log(location.hostname)
 
-    if (location.hostname == "localhost") {
+    if ( location.hostname == "localhost") {
         $('#firstName').val("first name");
         $('#lastName').val("last name");
         $('#phoneNumber').val("1234567890");
