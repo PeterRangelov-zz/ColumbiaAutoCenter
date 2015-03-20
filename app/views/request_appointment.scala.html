@@ -8,6 +8,10 @@
 
     <script src="@routes.Assets.at("/javascripts/populateForm.js")"></script>
     <script src="@routes.Assets.at("/javascripts/formance.min.js")"></script>
+    <script src="@routes.Assets.at("/javascripts/jquery.datetimepicker.js")"></script>
+    <link rel=stylesheet href="@routes.Assets.at("/stylesheets/jquery.datetimepicker.css")">
+
+
     <div class="row">
     </div>
 
@@ -70,39 +74,25 @@
                 <div class="row">
                     <div class="small-12 medium-4 columns">
                         <label>Date & time (first choice) <small>required</small>
-                            <div class="small-6 medium-12 columns">
-                                <input type="text" name="date1" id="date1" placeholder="Date - first choice" required/>
-                            </div>
-                            <div class="small-6 medium-12 columns">
-                                <input type="text" name="time1" id="time1" placeholder="Time - first choice" required/>
-                            </div>
+                            <input type="text" name="datetime1" id="datetime1" placeholder="M-F:8AM-6PM; SAT:8AM-2PM" required/>
                         </label>
                         <small class="error">Date & time selection is required.</small>
                     </div>
+
                     <div class="small-12 medium-4 columns">
                         <label>Date & time (second choice) <small>required</small>
-                            <div class="small-6 medium-12 columns">
-                                <input type="text" name="date2" id="date2" placeholder="Date - second choice" required/>
-                            </div>
-                            <div class="small-6 medium-12 columns">
-                                <input type="text" name="time2" id="time2" placeholder="Time - second choice" required/>
-                            </div>
+                            <input type="text" name="datetime2" id="datetime2" placeholder="M-F:8AM-6PM; SAT:8AM-2PM" required/>
                         </label>
                         <small class="error">Date & time selection is required.</small>
-
                     </div>
+
                     <div class="small-12 medium-4 columns">
-                        <label>Date & time (third choice)
-                            <div class="small-6 medium-12 columns">
-                                <input type="text" name="date3" id="date3" placeholder="Date - third choice" />
-                            </div>
-                            <div class="small-6 medium-12 columns">
-                                <input type="text" name="time3" id="time3" placeholder="Time - third choice" />
-                            </div>
-
-
+                        <label>Date & time (third choice) <small>required</small>
+                            <input type="text" name="datetime3" id="datetime3" placeholder="M-F:8AM-6PM; SAT:8AM-2PM"/>
                         </label>
+                        <small class="error">Date & time selection is required.</small>
                     </div>
+
                 </div>
 
 

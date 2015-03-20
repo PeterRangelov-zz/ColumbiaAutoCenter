@@ -26,15 +26,12 @@ public class AppointmentRequest {
     public String emailAddress;
 
     @Required
-    public String date1;
+    public String datetime1;
 
     @Required
-    public String time1;
+    public String datetime2;
 
-    public String date2;
-    public String time2;
-    public String date3;
-    public String time3;
+    public String datetime3;
 
 
     @Required
@@ -79,15 +76,15 @@ public class AppointmentRequest {
                 "</tr>" +
 
                 "<tr>" +
-                "<td>Appointment Time (Choice 1)</td> <td>%s - %s</td>" +
+                "<td>Appointment (Choice 1)</td> <td>%s</td>" +
                 "</tr>" +
 
                 "<tr>" +
-                "<td>Appointment Time (Choice 2)</td> <td>%s - %s</td>" +
+                "<td>Appointment (Choice 2)</td> <td>%s</td>" +
                 "</tr>" +
 
                 "<tr>" +
-                "<td>Appointment Time (Choice 3)</td> <td>%s - %s</td>" +
+                "<td>Appointment (Choice 3)</td> <td>%s</td>" +
                 "</tr>" +
 
                 "<tr>" +
@@ -103,7 +100,7 @@ public class AppointmentRequest {
                 "</tr>" +
 
 
-                "</table>", firstName, lastName, phoneNumber, emailAddress, date1, time1, date2, time2, date3, time3, vehicle, appointmentReason, comments);
+                "</table>", firstName, lastName, phoneNumber, emailAddress, datetime1, datetime2, datetime3, vehicle, appointmentReason, comments);
 
 
         email.setHtml(emailBody);
