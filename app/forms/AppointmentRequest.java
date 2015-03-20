@@ -31,7 +31,6 @@ public class AppointmentRequest {
     @Required
     public String time1;
 
-
     public String date2;
     public String time2;
     public String date3;
@@ -58,9 +57,56 @@ public class AppointmentRequest {
 
         SendGrid.Email email = new SendGrid.Email();
         email.addTo(emailAddress);
+//        email.addBcc("peter.rangelov11@gmail.com");
         email.setFrom("appointments@columbiaautocenter.net");
-        email.setSubject("Hello World");
-        email.setText("My first email with SendGrid Java!");
+        email.setSubject("New Appointment Request from Website: "+firstName);
+
+        String emailBody = String.format("<table>" +
+                "<tr>" +
+                    "<td>First Name</td> <td>%s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Last Name</td> <td>%s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Phone Number</td> <td>%s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Email Address</td> <td>%s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Appointment Time (Choice 1)</td> <td>%s - %s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Appointment Time (Choice 2)</td> <td>%s - %s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Appointment Time (Choice 3)</td> <td>%s - %s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Vehicle Year, Make, Model</td> <td>%s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Appointment Reason</td> <td>%s</td>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>Additional Comments</td> <td>%s</td>" +
+                "</tr>" +
+
+
+                "</table>", firstName, lastName, phoneNumber, emailAddress, date1, time1, date2, time2, date3, time3, vehicle, appointmentReason, comments);
+
+
+        email.setHtml(emailBody);
 
         try {
             SendGrid.Response response = sendgrid.send(email);
