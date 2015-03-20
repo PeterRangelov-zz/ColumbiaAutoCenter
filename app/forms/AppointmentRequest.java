@@ -54,7 +54,7 @@ public class AppointmentRequest {
         Logger.info(sendgridUsername);
         Logger.info(sendgridPassword);
 
-        SendGrid sendgrid = new SendGrid(System.getProperty("SENDGRID_USERNAME"), System.getProperty("SENDGRID_PASSWORD"));
+        SendGrid sendgrid = new SendGrid(Play.application().configuration().getString("sendgrid.username"), play.Play.application().configuration().getString("sendgrid.password"));
 
         SendGrid.Email email = new SendGrid.Email();
         email.addTo(emailAddress);
