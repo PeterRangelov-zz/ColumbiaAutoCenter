@@ -14,4 +14,7 @@ GET         /team                controllers.Application.ourTeam()
 GET         /about               controllers.Application.aboutUs()
 GET         /contact             controllers.Application.contactUs()
 GET         /appointment         controllers.Application.requestAppointment()
+POST        /thank-you           controllers.Application.thanksForRequestingAppointment()
+
+
 POST        /appointment         controllers.Application.submitAppointmentRequest()

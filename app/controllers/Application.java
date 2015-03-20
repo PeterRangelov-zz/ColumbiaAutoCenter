@@ -42,42 +42,24 @@ public class Application extends Controller {
         return ok(request_appointment.render(myForm));
     }
 
+    public static Result thanksForRequestingAppointment() {
+        return ok(appointment_thank_you.render());
+    }
+
     public static Result submitAppointmentRequest() {
         System.out.println("method called");
 
         Form<AppointmentRequest> boundForm = myForm.bindFromRequest();
 
-        AppointmentRequest apptReq = boundForm.get();
+        AppointmentRequest apptRequest = boundForm.get();
 
-        // ERROR CHECK
-        if (boundForm.hasErrors()) {
-            Map<String, List<ValidationError>> errors = boundForm.errors();
-            Logger.info(errors.size() + " ERRORS FOUND!");
+        Logger.info(apptRequest.toString());
 
-
-            for (String e: errors.keySet()) {
-                Logger.info(e);
-            }
-//            for (ValidationError e : errors.values()) {
-//                Logger.info(e.toString());
-//            }
-
-            flash("error", "Please correct the form below.");
-
-            return badRequest(request_appointment.render(boundForm));
-        }
-        else {
-            Logger.info("NO ERRORS FOUND!");
-            apptReq.sendEmail();
-        }
-
-
-//        AppointmentRequest apptRequest = f.get();
+        apptRequest.sendEmail();
 
 
 
 
-//        System.out.println(apptRequest);
-        return TODO;
+        return ok(appointment_thank_you.render());
     }
 }

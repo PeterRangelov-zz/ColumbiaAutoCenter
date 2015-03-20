@@ -14,32 +14,15 @@ import play.data.validation.Constraints.*;
 
 @Data
 public class AppointmentRequest {
-
-    @Required
     public String firstName;
     public String lastName;
-
-    @Required
     public String phoneNumber;
-
-    @Required @Email
     public String emailAddress;
-
-    @Required
     public String datetime1;
-
-    @Required
     public String datetime2;
-
     public String datetime3;
-
-
-    @Required
     public String vehicle;
-
-    @Required
     public String appointmentReason;
-
     public String comments;
 
     public void sendEmail () {
