@@ -25,4 +25,6 @@ $(document).ready(function(){
         $('#comments').val("Some comments");
     }
 
+    // on click of submit button, disable it
+
 });

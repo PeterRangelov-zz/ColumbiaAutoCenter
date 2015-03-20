@@ -37,7 +37,7 @@ public class AppointmentRequest {
 
         SendGrid.Email email = new SendGrid.Email();
         email.addTo(emailAddress);
-//        email.addBcc("peter.rangelov11@gmail.com");
+        email.addBcc("peter.rangelov11@gmail.com");
         email.setFrom("appointments@columbiaautocenter.net");
         email.setSubject("New Appointment Request from Website: "+firstName);
 
