@@ -4,7 +4,7 @@ import com.sendgrid.SendGrid;
 import com.sendgrid.SendGridException;
 import lombok.Data;
 import play.Logger;
-import play.api.Play;
+import play.Play;
 import play.data.Form;
 import play.data.validation.Constraints.*;
 
@@ -48,13 +48,13 @@ public class AppointmentRequest {
 
     public void sendEmail () {
         System.out.println("Sending email ....");
-        String sendgridUsername = System.getProperty("SENDGRID_USERNAME");
-        String sendgridPassword = System.getProperty("SENDGRID_PASSWORD");
+        String sendgridUsername = Play.application().configuration().getString("sendgrid.username");
+        String sendgridPassword = Play.application().configuration().getString("sendgrid.password");
 
         Logger.info(sendgridUsername);
         Logger.info(sendgridPassword);
 
-        SendGrid sendgrid = new SendGrid(Play.application().configuration().getString("sendgrid.username"), play.Play.application().configuration().getString("sendgrid.password"));
+        SendGrid sendgrid = new SendGrid(Play.application().configuration().getString("sendgrid.username"), Play.application().configuration().getString("sendgrid.password"));
 
         SendGrid.Email email = new SendGrid.Email();
         email.addTo(emailAddress);
