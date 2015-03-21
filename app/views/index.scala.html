@@ -1,43 +1,104 @@
 @main {
 
-    <div class="row">
-        <div class="small-12 centered">
-            <a href="@routes.Application.requestAppointment()" class="button">
-                <h1>REQUEST AN APPOINTMENT</h1>
-            </a>
-        </div>
 
-    </div>
+
+
+
+
 
 
 
     <div class="row-fluid">
+        <div class="small-12 medium-4 columns">
+            <div class="row">
+                <div class="small-12 columns">
+                    <a href="@routes.Application.requestAppointment()" class="button" >
+                        REQUEST AN APPOINTMENT
+                    </a>
+                </div>
 
-        <div class="small-12 medium-6 large-3 columns centered">
-            <i class="fa fa-trophy fa-4x centered"></i>
+            </div>
+            <img src="@routes.Assets.at("images/approved_by/super_service_award.png")">
+            <h4>Why choose us?</h4>
 
-            <h3>Quality auto repair</h3>
-            <p>All of our technicians are ASE certified and receive the most up-to-date training and diagnostic equipment for your vehicle.</p>
-            <p>We guarantee our work with a one year or 12,000- mile warranty.</p>
-            <p>We will provide references – a list of customers who can vouch for our work.</p>
+            <ul>
+                <li>We provide the most up-to-date training and diagnostic equipment for your vehicle.</li>
+                <li>We guarantee the estimate we provide.</li>
+                <li>We do a free safety inspection to uncover potential problems.</li>
+                <li>ASE Certified technicians.</li>
+                <li>We provide a free shuttle service for you or offer a ride to work within a 10-mile radius.</li>
+                <li>We will keep you informed throughout the day.</li>
 
+                <br>
+            </ul>
         </div>
 
-        <div class="small-12 medium-6 large-3 columns centered">
-            <i class="fa fa-map-marker fa-4x"></i>
+        <div class="small-12 medium-8 columns">
+            <div class="row" >
+                <div class="small-12 medium-12 large-8 columns" style="margin: auto; float: none">
 
-            <h3>Locally owned</h3>
-            <p>When you choose Columbia Auto Center, you support your local community. Dar and Brian have been running the business for over 25 years, and employ autotechs with Master ASE and L1 Certifications.</p>
-            <p><a href="@routes.Application.ourTeam()">Click here</a> to read about our team.</p>
-            <br>
-            <br>
-            <br>
+                    <ul class="example-orbit" data-orbit>
+                        <li>
+                            <img src="@routes.Assets.at("images/storefront.jpg")">
+                            <div class="orbit-caption">
+                                Columbia Auto Center in action #1.
+                            </div>
+                        </li>
+                        <li>
+                            <img src="@routes.Assets.at("images/storefront.jpg")">
+                            <div class="orbit-caption">
+                                Columbia Auto Center in action #2.
+                            </div>
+                        </li>
+                        <li>
+                            <img src="@routes.Assets.at("images/storefront.jpg")">
+                            <div class="orbit-caption">
+                                Columbia Auto Center in action #3.
+                            </div>
+                        </li>
+                    </ul>
 
+
+
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-6 large-6 columns centered">
+                    <i class="fa fa-trophy fa-4x centered"></i>
+
+                    <h3>Quality auto repair</h3>
+                    <p>All of our technicians are ASE certified and receive the most up-to-date training and diagnostic equipment for your vehicle.</p>
+                    <p>We guarantee our work with a one year or 12,000- mile warranty.</p>
+                    <p>We will provide references – a list of customers who can vouch for our work.</p>
+
+                </div>
+
+                <div class="small-12 medium-6 large-6 columns centered">
+                    <i class="fa fa-map-marker fa-4x"></i>
+
+                    <h3>Locally owned</h3>
+                    <p>When you choose Columbia Auto Center, you support your local community. Dar and Brian have been running the business for over 25 years, and employ autotechs with Master ASE and L1 Certifications.</p>
+                    <p><a href="@routes.Application.ourTeam()">Click here</a> to read about our team.</p>
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+
+
+
+            </div>
         </div>
-
-
         <hr>
     </div>
+
+
+
+
+
+
 
 
 }
