@@ -26,5 +26,17 @@ $(document).ready(function(){
     }
 
     // on click of submit button, disable it
+    $("#submit").click(function(){
+        $("#form").on('valid.fndtn.abide', function () {
+            $("#submit").prop("disabled",true);
+            console.log('valid!');
+        });
+
+        $("#form").on('invalid.fndtn.abide', function () {
+            console.log('invalid!');
+        });
+
+
+    });
 
 });
