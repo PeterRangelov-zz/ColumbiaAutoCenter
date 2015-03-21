@@ -29,11 +29,11 @@ $(document).ready(function(){
     $("#submit").click(function(){
         $("#form").on('valid.fndtn.abide', function () {
             $("#submit").prop("disabled",true);
-            console.log('valid!');
+            console.log('valid');
         });
 
         $("#form").on('invalid.fndtn.abide', function () {
-            console.log('invalid!');
+            console.log('invalid');
         });
 
 
