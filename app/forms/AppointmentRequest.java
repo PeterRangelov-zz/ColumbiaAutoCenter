@@ -30,15 +30,17 @@ public class AppointmentRequest {
         String sendgridUsername = Play.application().configuration().getString("sendgrid.username");
         String sendgridPassword = Play.application().configuration().getString("sendgrid.password");
 
+
+
         Logger.info(sendgridUsername);
         Logger.info(sendgridPassword);
 
         SendGrid sendgrid = new SendGrid(Play.application().configuration().getString("sendgrid.username"), Play.application().configuration().getString("sendgrid.password"));
 
         SendGrid.Email email = new SendGrid.Email();
-        email.addTo(emailAddress);
+        email.addTo(Play.application().configuration().getString("appointment.recepient.email"));
         email.addBcc("peter.rangelov11@gmail.com");
-        email.setFrom("appointments@columbiaautocenter.net");
+        email.setFrom("website-appointments-noreply@columbiaautocenter.net");
         email.setSubject("New Appointment Request from Website: "+firstName);
 
         String emailBody = String.format("<table>" +
