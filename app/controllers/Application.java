@@ -35,6 +35,10 @@ public class Application extends Controller {
     }
 
     public static Result services() {
+        return ok(services.render());
+    }
+
+    public static Result coupons() {
         return TODO;
     }
 

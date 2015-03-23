@@ -10,6 +10,7 @@ GET         /assets/*file        controllers.Assets.at(path="/public", file)
 
 
 GET         /services            controllers.Application.services()
+GET         /coupons             controllers.Application.coupons()
 GET         /team                controllers.Application.ourTeam()
 GET         /about               controllers.Application.aboutUs()
 GET         /contact             controllers.Application.contactUs()
