@@ -1,13 +1,22 @@
 @import views.html.partials.team_member
+@import views.html.partials.coupon
 
 @main{
     <title>Coupons | Columbia Auto Center - Columbia, MD Auto Repair Services</title>
-    <meta name="keywords" content="Columbia auto repair services coupons groupon ">
+    <meta name="keywords" content="Columbia auto repair services coupons deals, hybrid special, md state inspection vehicle, discounts for automotive services, groupon ">
+
+    <script src="@routes.Assets.at("javascripts/jQuery.print.js")"></script>
+
 
     <div class="row">
-        COUPONS
+        <h1>Coupons</h1>
+        @coupon("10% off First Time Customers", "coupon 1.png")
+        @coupon("15% off Timing Belt Package", "coupon 2.png")
+        @coupon("$45 MD State Inspection", "coupon 3.png")
+        @coupon("Hybrid Special: 10% off Parts & Labor", "hybrid_special.png")
 
     </div>
+
 
 
 

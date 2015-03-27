@@ -39,7 +39,7 @@ public class Application extends Controller {
     }
 
     public static Result coupons() {
-        return TODO;
+        return ok(coupons.render());
     }
 
     public static Result requestAppointment() {
