@@ -23,7 +23,7 @@ public class Application extends Controller {
     }
 
     public static Result aboutUs() {
-        return TODO;
+        return ok(about.render());
     }
 
     public static Result contactUs() {
