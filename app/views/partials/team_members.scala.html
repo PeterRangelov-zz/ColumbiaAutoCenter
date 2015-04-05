@@ -1,0 +1,37 @@
+
+
+@(names: scala.List[String])
+
+@import play.Play;
+@import play.Configuration;
+@import Play.application
+
+    @for(name <- names ) {
+        <div class="small-12 medium-7 large-4 columns">
+            <br>
+            <img src="@application().configuration.getString(name+".pic")"/>
+        </div>
+
+        <div class="small-12 medium-7 large-8 columns">
+            <h3>@application().configuration.getString(name+".name")</h3>
+            <h5><b>@application().configuration.getString(name+".role")</b></h5>
+
+            @if(application().configuration.getString(name+".email")) {
+                Email: <a href="mailto:@application().configuration.getString(name+".email")?Subject=Hello%20" target="_top">@application().configuration.getString(name+".email")</a>
+                <br>
+            }
+            @if(application().configuration.getString(name+".phone")) {
+                @application().configuration.getString(name+".phone")
+                <br><br>
+            }
+
+            <p>@application().configuration.getString(name+".description")</p>
+        </div>
+
+
+
+
+<div class="row">
+</div>
+
+}

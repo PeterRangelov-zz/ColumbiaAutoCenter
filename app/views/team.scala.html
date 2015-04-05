@@ -1,6 +1,13 @@
-@import views.html.partials.team_member
+@import views.html.partials.team_members;
+@import play.Play;
+@import play.Configuration;
+@import Play.application
 
 @main{
+
+
+
+
     <title>Our Team | Columbia Auto Center - Columbia, MD Auto Repair Services</title>
     <meta name="keywords" content="Columbia auto repair services our team ">
 
@@ -14,33 +21,8 @@
 
 
 
-    @team_member("http://columbiaautocenter.net/wp-content/uploads/2013/04/seanhamilton-300x199.jpg", "Sean Hamilton", "Customer Service Manager", "Sean, an expert in computer diagnostics, is usually the first service " +
-                "advisor you will meet at the shop. Sean, who has worked at the shop for seven years, is extremely knowledgeable about " +
-                "vehicle parts and will keep you informed throughout the day on the progress of your vehicle. " +
-                "Sean will explain in great detail what needs to be repaired to get your vehicle back on the road safely.", "Sean.Hamilton@ColumbiaAutoCenter.net", "410-730-1050")
 
-    @team_member("/assets/images/team/Joe.jpg", "Joe Morley", "Automotive Service Adviser", "Joe is an integral part of Customer Service and running the front office. With more than 25 years of automotive industry experience, Joe is able to answer almost any question " +
-            "and has a passion to use his skills in pursuit of being an excellent automotive service adviser. If you have any questions about automotive services regarding your vehicle, then look no further than Joe at the front counter.", null, null)
-
-        @team_member("http://columbiaautocenter.net/wp-content/uploads/2013/04/FullSizeRender-1-300x225.jpg", "Tasha", "Customer Service Representative", "Tasha is from Baltimore, Maryland and has been living in Columbia for the past 20 years." +
-                " She has been working on vehicles for 19 years. She started out as an auto mechanic and then moved to the parts department. She is highly-skilled in customer service.", null, null)
-
-        @team_member("http://columbiaautocenter.net/wp-content/uploads/2013/04/davisphoto-200x300.jpg", "Duane Davis", "Hybrid Specialist", "Duane is an expert when it comes to repairing Hybrid vehicles. " +
-                "He is a Master L1 Mechanic, emission certified, air bag system specialist, and computer diagnostic expert. He has worked on cars and trucks for more than 25 years. " +
-                "He keeps up-to-date in his training and regularly attends seminars on Hybrids. He is a major part of Columbia Auto Center repair.", null, null)
-
-        @team_member("http://columbiaautocenter.net/wp-content/uploads/2012/04/DSC_0066-300x199.jpg", "Fadil Repesa", "State Inspector", "Fadil has worked for Columbia Auto Center for 25 years. " +
-                "He is a straight-shooting mechanic who takes great pride in his work. Fadil will provide an honest assessment on what needs to be repaired or what doesn’t need to be repaired to pass a state inspection. " +
-                "If you are about to purchase a vehicle and unsure if the vehicle is going to need costly repairs to pass the state inspection, Fadil  can save you money and heartache by providing " +
-                "a complete analysis of what you will need to do to make sure your vehicle is safe to drive. Fadil will let you know if the vehicle you’re interested in has been in a previous accident, " +
-                "and provide an assessment on whether the previous repair work meets Maryland’s standards for safety.", null, null)
-
-        @team_member("http://columbiaautocenter.net/wp-content/uploads/2013/04/DSC_00571.jpg", "Eric Fleming", "Master L1 Mechanic", "Eric has been working as a mechanic for more than two decades at Columbia Auto Center. " +
-                "He is one of the top mechanics in the shop. He is an expert in trouble-shooting issues on vehicles and takes great pride in solving problems. " +
-                "He is ASE Master Technician and Emissions Certified.  He willingly takes on any project from engines, transmissions, cylinder heads to electrical issues and more. He is a leader and a teacher in the shop who is well-respected among his peers.", null, null)
-
-    @team_member("/assets/images/team/Yilmaz.jpg", "Yilmaz Demir", "Foreign Cars Technician", "Yilmaz has been with Columbia Auto Center for close to two years. For over ten years, Yilmaz has been servicing foreign and domestic vehicles " +
-            "with a specialty in the European and Japanese manufacturers. Yilmaz is known for being very accurate in his diagnosis and repairs.", null, null)
+    @team_members(scala.List("sean_hamilton", "joe_morley", "tasha", "duane_davis", "fadil_repesa", "eric_fleming", "yilmaz_demir"))
 
 
 
