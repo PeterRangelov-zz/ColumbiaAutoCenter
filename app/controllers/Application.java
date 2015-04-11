@@ -27,7 +27,7 @@ public class Application extends Controller {
     }
 
     public static Result contactUs() {
-        return TODO;
+        return ok(contact.render());
     }
 
     public static Result partsForSale() {
