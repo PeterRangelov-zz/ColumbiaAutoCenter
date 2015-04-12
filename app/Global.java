@@ -10,6 +10,7 @@ public class Global extends GlobalSettings {
         Logger.info("APPLICATION HAS STARTED");
         Logger.info("SENDGRID USERNAME -> "+Play.application().configuration().getString("sendgrid.username"));
         Logger.info("SENDGRID PASSWORD -> "+Play.application().configuration().getString("sendgrid.password"));
+        Logger.info("GOOGLE MAPS API KEY -> "+Play.application().configuration().getString("gmaps.apikey"));
     }
 
     @Override
