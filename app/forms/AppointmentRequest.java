@@ -43,7 +43,8 @@ public class AppointmentRequest {
         email.setFrom("website-appointments-noreply@columbiaautocenter.net");
         email.setSubject("New Appointment Request from Website: "+firstName);
 
-        String emailBody = String.format("<table>" +
+        String emailBody = String.format("Please follow up with: <br>" +
+                "<table>" +
                 "<tr>" +
                     "<td>First Name</td> <td>%s</td>" +
                 "</tr>" +
