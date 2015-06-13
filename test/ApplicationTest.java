@@ -35,7 +35,7 @@ public class ApplicationTest {
 
     @Test
     public void renderTemplate() {
-        assertThat(true);
+        assertThat(false);
     }
 
 
